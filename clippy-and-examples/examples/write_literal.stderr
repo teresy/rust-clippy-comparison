@@ -1,0 +1,88 @@
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:39:79
+   |
+39 |     writeln!(&mut v, "{} of {:b} people know binary, the other half doesn't", 1, 2);
+   |                                                                               ^
+   |
+   = note: `-D clippy::write-literal` implied by `-D warnings`
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:40:32
+   |
+40 |     write!(&mut v, "Hello {}", "world");
+   |                                ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:41:44
+   |
+41 |     writeln!(&mut v, "Hello {} {}", world, "world");
+   |                                            ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:42:34
+   |
+42 |     writeln!(&mut v, "Hello {}", "world");
+   |                                  ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:43:38
+   |
+43 |     writeln!(&mut v, "10 / 4 is {}", 2.5);
+   |                                      ^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:44:36
+   |
+44 |     writeln!(&mut v, "2 + 1 = {}", 3);
+   |                                    ^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:49:33
+   |
+49 |     writeln!(&mut v, "{0} {1}", "hello", "world");
+   |                                 ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:49:42
+   |
+49 |     writeln!(&mut v, "{0} {1}", "hello", "world");
+   |                                          ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:50:33
+   |
+50 |     writeln!(&mut v, "{1} {0}", "hello", "world");
+   |                                 ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:50:42
+   |
+50 |     writeln!(&mut v, "{1} {0}", "hello", "world");
+   |                                          ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:53:41
+   |
+53 |     writeln!(&mut v, "{foo} {bar}", foo="hello", bar="world");
+   |                                         ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:53:54
+   |
+53 |     writeln!(&mut v, "{foo} {bar}", foo="hello", bar="world");
+   |                                                      ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:54:41
+   |
+54 |     writeln!(&mut v, "{bar} {foo}", foo="hello", bar="world");
+   |                                         ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/write_literal.rs:54:54
+   |
+54 |     writeln!(&mut v, "{bar} {foo}", foo="hello", bar="world");
+   |                                                      ^^^^^^^
+
+error: aborting due to 14 previous errors
+

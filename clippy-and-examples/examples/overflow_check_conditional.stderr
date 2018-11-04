@@ -1,0 +1,52 @@
+error: You are trying to use classic C overflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:21:5
+   |
+21 |     if a + b < a {
+   |        ^^^^^^^^^
+   |
+   = note: `-D clippy::overflow-check-conditional` implied by `-D warnings`
+
+error: You are trying to use classic C overflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:24:5
+   |
+24 |     if a > a + b {
+   |        ^^^^^^^^^
+
+error: You are trying to use classic C overflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:27:5
+   |
+27 |     if a + b < b {
+   |        ^^^^^^^^^
+
+error: You are trying to use classic C overflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:30:5
+   |
+30 |     if b > a + b {
+   |        ^^^^^^^^^
+
+error: You are trying to use classic C underflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:33:5
+   |
+33 |     if a - b > b {
+   |        ^^^^^^^^^
+
+error: You are trying to use classic C underflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:36:5
+   |
+36 |     if b < a - b {
+   |        ^^^^^^^^^
+
+error: You are trying to use classic C underflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:39:5
+   |
+39 |     if a - b > a {
+   |        ^^^^^^^^^
+
+error: You are trying to use classic C underflow conditions that will fail in Rust.
+  --> $DIR/overflow_check_conditional.rs:42:5
+   |
+42 |     if a < a - b {
+   |        ^^^^^^^^^
+
+error: aborting due to 8 previous errors
+

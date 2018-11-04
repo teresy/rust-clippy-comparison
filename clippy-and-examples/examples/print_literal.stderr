@@ -1,0 +1,88 @@
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:34:71
+   |
+34 |     println!("{} of {:b} people know binary, the other half doesn't", 1, 2);
+   |                                                                       ^
+   |
+   = note: `-D clippy::print-literal` implied by `-D warnings`
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:35:24
+   |
+35 |     print!("Hello {}", "world");
+   |                        ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:36:36
+   |
+36 |     println!("Hello {} {}", world, "world");
+   |                                    ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:37:26
+   |
+37 |     println!("Hello {}", "world");
+   |                          ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:38:30
+   |
+38 |     println!("10 / 4 is {}", 2.5);
+   |                              ^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:39:28
+   |
+39 |     println!("2 + 1 = {}", 3);
+   |                            ^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:44:25
+   |
+44 |     println!("{0} {1}", "hello", "world");
+   |                         ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:44:34
+   |
+44 |     println!("{0} {1}", "hello", "world");
+   |                                  ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:45:25
+   |
+45 |     println!("{1} {0}", "hello", "world");
+   |                         ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:45:34
+   |
+45 |     println!("{1} {0}", "hello", "world");
+   |                                  ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:48:33
+   |
+48 |     println!("{foo} {bar}", foo="hello", bar="world");
+   |                                 ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:48:46
+   |
+48 |     println!("{foo} {bar}", foo="hello", bar="world");
+   |                                              ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:49:33
+   |
+49 |     println!("{bar} {foo}", foo="hello", bar="world");
+   |                                 ^^^^^^^
+
+error: literal with an empty format string
+  --> $DIR/print_literal.rs:49:46
+   |
+49 |     println!("{bar} {foo}", foo="hello", bar="world");
+   |                                              ^^^^^^^
+
+error: aborting due to 14 previous errors
+

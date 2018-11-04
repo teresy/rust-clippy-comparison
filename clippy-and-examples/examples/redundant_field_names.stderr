@@ -1,0 +1,46 @@
+error: redundant field names in struct initialization
+  --> $DIR/redundant_field_names.rs:46:9
+   |
+46 |         gender: gender,
+   |         ^^^^^^^^^^^^^^ help: replace it with: `gender`
+   |
+   = note: `-D clippy::redundant-field-names` implied by `-D warnings`
+
+error: redundant field names in struct initialization
+  --> $DIR/redundant_field_names.rs:47:9
+   |
+47 |         age: age,
+   |         ^^^^^^^^ help: replace it with: `age`
+
+error: redundant field names in struct initialization
+  --> $DIR/redundant_field_names.rs:68:25
+   |
+68 |     let _ = RangeFrom { start: start };
+   |                         ^^^^^^^^^^^^ help: replace it with: `start`
+
+error: redundant field names in struct initialization
+  --> $DIR/redundant_field_names.rs:69:23
+   |
+69 |     let _ = RangeTo { end: end };
+   |                       ^^^^^^^^ help: replace it with: `end`
+
+error: redundant field names in struct initialization
+  --> $DIR/redundant_field_names.rs:70:21
+   |
+70 |     let _ = Range { start: start, end: end };
+   |                     ^^^^^^^^^^^^ help: replace it with: `start`
+
+error: redundant field names in struct initialization
+  --> $DIR/redundant_field_names.rs:70:35
+   |
+70 |     let _ = Range { start: start, end: end };
+   |                                   ^^^^^^^^ help: replace it with: `end`
+
+error: redundant field names in struct initialization
+  --> $DIR/redundant_field_names.rs:72:32
+   |
+72 |     let _ = RangeToInclusive { end: end };
+   |                                ^^^^^^^^ help: replace it with: `end`
+
+error: aborting due to 7 previous errors
+

@@ -1,0 +1,68 @@
+error: passing a unit value to a function
+  --> $DIR/unit_arg.rs:35:9
+   |
+35 |     foo({});
+   |         ^^
+   |
+   = note: `-D clippy::unit-arg` implied by `-D warnings`
+help: if you intended to pass a unit value, use a unit literal instead
+   |
+35 |     foo(());
+   |         ^^
+
+error: passing a unit value to a function
+  --> $DIR/unit_arg.rs:36:9
+   |
+36 |     foo({ 1; });
+   |         ^^^^^^
+help: if you intended to pass a unit value, use a unit literal instead
+   |
+36 |     foo(());
+   |         ^^
+
+error: passing a unit value to a function
+  --> $DIR/unit_arg.rs:37:9
+   |
+37 |     foo(foo(1));
+   |         ^^^^^^
+help: if you intended to pass a unit value, use a unit literal instead
+   |
+37 |     foo(());
+   |         ^^
+
+error: passing a unit value to a function
+  --> $DIR/unit_arg.rs:38:9
+   |
+38 |       foo({
+   |  _________^
+39 | |         foo(1);
+40 | |         foo(2);
+41 | |     });
+   | |_____^
+help: if you intended to pass a unit value, use a unit literal instead
+   |
+38 |     foo(());
+   |         ^^
+
+error: passing a unit value to a function
+  --> $DIR/unit_arg.rs:42:10
+   |
+42 |     foo3({}, 2, 2);
+   |          ^^
+help: if you intended to pass a unit value, use a unit literal instead
+   |
+42 |     foo3((), 2, 2);
+   |          ^^
+
+error: passing a unit value to a function
+  --> $DIR/unit_arg.rs:44:11
+   |
+44 |     b.bar({ 1; });
+   |           ^^^^^^
+help: if you intended to pass a unit value, use a unit literal instead
+   |
+44 |     b.bar(());
+   |           ^^
+
+error: aborting due to 6 previous errors
+

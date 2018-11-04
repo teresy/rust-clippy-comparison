@@ -1,0 +1,52 @@
+error: unneeded return statement
+  --> $DIR/needless_return.rs:21:5
+   |
+21 |     return true;
+   |     ^^^^^^^^^^^^ help: remove `return` as shown: `true`
+   |
+   = note: `-D clippy::needless-return` implied by `-D warnings`
+
+error: unneeded return statement
+  --> $DIR/needless_return.rs:25:5
+   |
+25 |     return true
+   |     ^^^^^^^^^^^ help: remove `return` as shown: `true`
+
+error: unneeded return statement
+  --> $DIR/needless_return.rs:30:9
+   |
+30 |         return true;
+   |         ^^^^^^^^^^^^ help: remove `return` as shown: `true`
+
+error: unneeded return statement
+  --> $DIR/needless_return.rs:32:9
+   |
+32 |         return false;
+   |         ^^^^^^^^^^^^^ help: remove `return` as shown: `false`
+
+error: unneeded return statement
+  --> $DIR/needless_return.rs:38:17
+   |
+38 |         true => return false,
+   |                 ^^^^^^^^^^^^ help: remove `return` as shown: `false`
+
+error: unneeded return statement
+  --> $DIR/needless_return.rs:40:13
+   |
+40 |             return true;
+   |             ^^^^^^^^^^^^ help: remove `return` as shown: `true`
+
+error: unneeded return statement
+  --> $DIR/needless_return.rs:47:9
+   |
+47 |         return true;
+   |         ^^^^^^^^^^^^ help: remove `return` as shown: `true`
+
+error: unneeded return statement
+  --> $DIR/needless_return.rs:49:16
+   |
+49 |     let _ = || return true;
+   |                ^^^^^^^^^^^ help: remove `return` as shown: `true`
+
+error: aborting due to 8 previous errors
+
