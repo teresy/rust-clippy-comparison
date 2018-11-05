@@ -11,6 +11,10 @@
 
 
 
+#![warn(clippy::all)]
+#![warn(clippy::redundant_pattern_matching)]
+
+
 fn main() {
     if let Ok(_) = Ok::<i32, i32>(42) {}
 

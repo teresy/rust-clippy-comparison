@@ -10,6 +10,8 @@
 
 
 
+#![warn(clippy::single_match)]
+
 fn dummy() {
 }
 
