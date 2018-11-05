@@ -12,15 +12,15 @@
 
 
 fn main() {
-    if Ok::<i32, i32>(42).is_ok() {}
+    if let Ok(_) = Ok::<i32, i32>(42) {}
 
-    if Err::<i32, i32>(42).is_err() {
+    if let Err(_) = Err::<i32, i32>(42) {
     }
 
-    if None::<()>.is_none() {
+    if let None = None::<()> {
     }
 
-    if Some(42).is_some() {
+    if let Some(_) = Some(42) {
     }
 
     if Ok::<i32, i32>(42).is_ok() {
