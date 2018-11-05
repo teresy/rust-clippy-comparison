@@ -7,7 +7,7 @@ time cargo clippy --test redundant_pattern_matching &> out.txt
 grep replace out.txt
 rm out.txt
 
-time ~/rooibos-future/main -d . -filter .rs -template ~/rooibos-future/catalogue/rust/clippy/style/redundant-pattern-matching
+time ~/rooibos-future/main -d . -filter redundant_pattern_matching.rs -templates `echo ~/rooibos-future/catalogue/rust/clippy/style/redundant-pattern-matching-* | tr ' ' ','`
 git checkout -- .
 
 cd ..
